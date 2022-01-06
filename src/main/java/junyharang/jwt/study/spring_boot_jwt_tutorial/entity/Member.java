@@ -1,8 +1,10 @@
 package junyharang.jwt.study.spring_boot_jwt_tutorial.entity;
 
 import lombok.*;
+import org.springframework.security.core.GrantedAuthority;
 
 import javax.persistence.*;
+import java.util.Collection;
 import java.util.Set;
 
 @Entity
@@ -37,5 +39,4 @@ public class Member {
             joinColumns = {@JoinColumn(name = "member_id", referencedColumnName = "member_id")},
             inverseJoinColumns = {@JoinColumn(name = "authority_name", referencedColumnName = "authority_name")})
     private Set<Authority> authorities;
-
 } // class 끝
