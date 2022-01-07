@@ -17,8 +17,8 @@ import java.util.Set;
 public class Member {
 
     @Id
-    @Column(name = "member_id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @Column(name = "member_id")
     private Long memberId;
 
     @Column(name = "member_name", length = 50, unique = true)

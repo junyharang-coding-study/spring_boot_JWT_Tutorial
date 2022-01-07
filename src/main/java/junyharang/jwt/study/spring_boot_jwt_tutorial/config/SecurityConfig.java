@@ -57,7 +57,7 @@ public class SecurityConfig extends WebSecurityConfigurerAdapter {
 
                 .and().authorizeRequests().antMatchers("/api/hello").permitAll()
                                           .antMatchers("/api/authenticate").permitAll()     // token을 받기 위한 api
-                                          .antMatchers("api/signup").permitAll()            // 회원 가입을 위한 api
+                                          .antMatchers("/api/signup").permitAll()            // 회원 가입을 위한 api
                 .anyRequest().authenticated()    // 나머지 모든 요청은 인증을 거쳐야 허용하겠다는 의미
 
                 // JwtFilter를 addFilterBefore로 등록했던 JwtSecurityConfig Class 적
